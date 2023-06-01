@@ -1,0 +1,28 @@
+
+.user-form label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin: 12px 0 5px 0;
+}
+
+.user-form input {
+    width: 40rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.user-form button {
+    display: block;
+    width: 5rem;
+    font-size: 13px;
+    padding: 5px 10px;
+    margin: 20px 0;
+    background-color:blueviolet;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* .user */

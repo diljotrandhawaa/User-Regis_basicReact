@@ -1,0 +1,8 @@
+.user-div {
+    width: 47rem;
+    margin: 1rem;
+    padding: 2px 10px;
+    border: 1px solid #000;
+    background-color: aqua;
+    border-radius: 5px;
+}
