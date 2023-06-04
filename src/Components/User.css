@@ -6,3 +6,8 @@
     background-color: aqua;
     border-radius: 5px;
 }
+
+.user-div h4 {
+    display: inline-block;
+    margin-right: 30px;
+}
