@@ -6,6 +6,7 @@ import UserForm from './Components/UserForm';
 import UsersList from './Components/UsersList';
 
 let init_users = [];
+let userId = 0;
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   function userInfoHandler (enteredUserInfo) {
     let userInfo = {
-      // id: (users.length + 1),
+      id: userId,
       ...enteredUserInfo
     };
     
@@ -42,7 +43,7 @@ function App() {
 
     for (var user of users) {
       console.log(user);
-      if (JSON.stringify(user) === JSON.stringify(userInfo)) {
+      if (user.name.trim() === userInfo.name.trim() && user.age.trim() === userInfo.age.trim()) {
         setInputValid(false);
         setErrorMsg({
           title: 'Invalid Input',
@@ -59,6 +60,7 @@ function App() {
     addUsers((prev_users) => {
       return [...prev_users, userInfo];
     })
+    userId++;
   }
 
   const errorBtnClickHandler = () => {

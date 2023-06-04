@@ -7,7 +7,7 @@ import './UsersList.css';
 const UsersList = (props) => {
     return (
         <Card>
-            { props.users.map((user) => <User name={user.name} age={user.age}/>) }
+            { props.users.map((user) => <User key={user.id} name={user.name} age={user.age}/>) }
         </Card>
     )
 };
