@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import Card from './UI/Card';
 import './UserForm.css';
 
 const UserForm = (props) => {
 
-    const [userName, setUserName] = useState('');
-    const [userAge, setUserAge] = useState('');
-
-    const nameChangeHandler = (event) => {
-        setUserName(event.target.value);
-    };
-
-    const ageChangeHandler = (event) => {
-        setUserAge(event.target.value)
-    };
+    const enteredUserName = useRef();
+    const enteredUserAge = useRef();
 
     const formSubmitHandler = (event) => {
         event.preventDefault();
         const userInfo = {
-            name: userName,
-            age: userAge
+            name: enteredUserName.current.value,
+            age: enteredUserAge.current.value
         };
         props.sendUserInfo(userInfo);
     };
@@ -28,9 +20,9 @@ const UserForm = (props) => {
         <Card className='user-form'>
             <form onSubmit={formSubmitHandler}>
                 <label>Username</label>
-                <input className='name-input' onChange={nameChangeHandler}></input>
+                <input className='name-input' ref={enteredUserName}></input>
                 <label>Age(Years)</label>
-                <input className='age-input' onChange={ageChangeHandler}></input>
+                <input className='age-input' ref={enteredUserAge}></input>
                 <button>Add User</button>
             </form>
         </Card>
