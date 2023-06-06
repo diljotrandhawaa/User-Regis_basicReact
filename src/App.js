@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ErrorModal from './Components/ErrorComponents/ErrorModal';
+import Wrapper from './Components/UI/Wrapper';
 import UserForm from './Components/UserForm';
 import UsersList from './Components/UsersList';
 
@@ -69,11 +70,11 @@ function App() {
 
 
   return (
-    <div className='app'>
+    <Wrapper className='app'>
       {!inputValid &&  <ErrorModal msg={errorMsg}  onBtnClick={errorBtnClickHandler}/> }
       <UserForm sendUserInfo={userInfoHandler}></UserForm>
       <UsersList users={users} />
-    </div>
+    </Wrapper>
   );
 }
 

@@ -1,11 +1,12 @@
 import React from 'react';
+import Wrapper from './UI/Wrapper';
 import './User.css';
 
 const User = (props) => {
-    return <div className='user-div'>
+    return <Wrapper className='user-div'>
         <h4>{props.name}</h4>
         <span>{props.age} years old</span>
-    </div>
+    </Wrapper>
 };
 
 export default User;

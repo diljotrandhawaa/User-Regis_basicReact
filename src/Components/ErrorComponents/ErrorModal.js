@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../UI/Card';
-import './EmptyInputs.css';
+import Wrapper from '../UI/Wrapper';
+import './ErrorModal.css';
 
 const ErrorModal = (props) => {
 
@@ -9,7 +10,7 @@ const ErrorModal = (props) => {
     }
 
     return (
-        <div>
+        <Wrapper>
             <div className='backdrop' />
             <Card className='error-card'>
                 <div className='heading-div'>
@@ -20,7 +21,7 @@ const ErrorModal = (props) => {
                 </div>
                 <button onClick={btnClickHandler}>Okay</button>
             </Card>
-        </div>
+        </Wrapper>
     )
 };
 
