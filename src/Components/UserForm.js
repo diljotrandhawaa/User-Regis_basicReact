@@ -14,6 +14,8 @@ const UserForm = (props) => {
             age: enteredUserAge.current.value
         };
         props.sendUserInfo(userInfo);
+        enteredUserName.current.value = '';
+        enteredUserAge.current.value = '';
     };
 
     return (
